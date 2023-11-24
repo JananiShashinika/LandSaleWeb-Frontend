@@ -1,0 +1,57 @@
+.nav {
+  nav-up:auto;
+  z-index: 999;
+ text-align:right;
+position: absolute;
+   top:0%;
+    border-radius: 0%;
+background: linear-gradient(to top right,gray, #1d54ca,#C0C0C0);
+    border-style:inherit;
+    width: 100%;
+    height: 70px;
+   opacity: 1;
+}
+
+.nav a{
+    color: antiquewhite;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    color:rgb(248, 113, 113)
+}
+
+.nav .dropdown a{
+    color: rgb(105, 44, 41) ;
+}
+.logo{
+    position: relative;
+    padding-top: 10px;
+    padding-left: 65px;
+    padding-right: 350px;
+    font-size:30px;
+    font-style:normal;
+    color: darkgoldenrod;
+}
+.me-auto i{
+   
+    text-align: right;
+    padding: 20px; 
+  }
+
+  .me-auto{
+    position: relative;
+    font-size:20px ;
+    display: flex;
+    flex: 3;
+    gap: 1.5rem;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    top: 0;
+ padding: 0.7rem 0.8rem;
+    text-align: center;   
+}
+
+.me-auto ::after {
+    
+    color: rgb(243, 15, 15);
+}

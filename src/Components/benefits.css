@@ -1,0 +1,67 @@
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+   
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-column-gap:20px;
+  }
+.column{
+    text-align: center;
+  }
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-md-12, .col-ml-6{
+position: relative;
+width: 100%;
+padding-right: 15px;
+padding-left: 15px;
+}
+/* 
+*, *:before, *:after {
+box-sizing: inherit;
+}
+*, ::after, ::before {
+outline: none !important;
+}
+*, ::after, ::before {
+box-sizing: border-box;
+} */
+
+div {
+display: block;
+}
+.contact-dots {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: -55px;
+    left: -50px;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+/* *, *:before, *:after {
+    box-sizing: inherit;
+}
+*, ::after, ::before {
+    outline: none !important;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+} */
+

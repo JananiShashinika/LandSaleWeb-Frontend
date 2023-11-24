@@ -1,0 +1,18 @@
+.signAs{
+    position: absolute;
+}
+
+.vh-100 gradient-custom{
+    float: right;
+    background-color: aqua;
+    border-color: aqua;
+    border-width: thin;
+}
+
+
+.submit{
+    margin: auto;
+    text-align: center;
+    position: fixed;
+    display: flex;
+}

@@ -1,0 +1,32 @@
+.welcome{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    color:rgb(10, 22, 78);
+    text-align: center;
+   
+}
+
+.sign{
+    background-color:white;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-style: oblique;
+    align-content: center ;
+    color:rgb(80, 49, 3);
+    padding: 20px;
+    height:100px;
+    width:100%;
+    border-color: darkgreen;
+    border-style:inherit ;
+}
+
+.create-account {
+    text-align: center;
+    opacity:0.8 ;
+    font-style:italic;
+    font-weight: bolder;
+    padding: 15px 50px;
+    position: centre;
+    color:black
+    
+}
+

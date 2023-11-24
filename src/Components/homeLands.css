@@ -1,0 +1,47 @@
+
+.discover {
+    padding-top: 5px;
+    color: rgb(63, 2, 2);
+    text-align: center;
+
+
+}
+
+
+.property{
+    text-align: center;
+    color: rgb(61, 182, 61);
+    font-family: cursive;
+    
+}
+
+.container{
+
+    height: 300px;
+    width: 960px;
+    margin: 5px;
+    border-radius: 5px;
+
+
+
+}
+
+.row {
+  
+    padding-top: 30px;
+    text-align: center;
+   color: rgb(70, 37, 37);
+   column-gap: 250px;
+
+   
+  
+
+
+    /* text-shadow: teal;   */
+    
+    /* column-rule-width: 50px;
+
+    column-rule-color: teal; */
+   
+}
+
