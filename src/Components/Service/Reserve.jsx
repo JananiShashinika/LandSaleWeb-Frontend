@@ -3,29 +3,33 @@ import Navigation from '../Navigation'
 import { Form,FormText,Button } from 'react-bootstrap'
 import { MDBRow ,MDBCol, MDBContainer} from 'mdb-react-ui-kit'
 import Footer from '../Footer'
+import Header from '../Header'
 
 
 function Reserve() {
   return (
     <div>
-<Navigation/>
-<br/>
-<Button  variant="outline-success" size="lg" href='/'> Back</Button>
+      <Header/>
+      <Navigation/>
+      <br/>
 
-<div style={{ marginTop:"5px" , align:"center",padding:"30px"}}>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "5vh" }}>
+        <Button  variant="success" size="lg" href="/Customer">Back to Customer Dashboard</Button>
+      </div>
+    <div style={{ marginTop:"5px" , align:"center",padding:"30px"}}>
 
-<h3 style={{color:"darkslateblue" ,textAlign:"center" ,textUnderlinePosition:"under"}}> 
-Reserve Your <span style={{color:'maroon'}}><b>DREAM </b></span><span style={{color:'green'}}>Land</span></h3>
-   <br></br>
-   <p><h5> Here, you can reserve the land that you are expecting to buy. You can reserve it for you
-    upto 10 days from payning date ,by paying the land reserving fee of Rs.50,000/=. This is a refundable payment 
-    that if you will not buy the lanssssd,money will be returned with 20% amount off. It will cost as the
-     reserving payment. 
-     <br></br>
-     Bank details are shown below. You can pay for bellow details & attach the payment receipt or transcript 
-     scanner copy and fill the form given below.All the money tractions are completely transparent..<br></br>
-     Our Agent will contact you soon.. </h5> </p>
-</div>
+    <h3 style={{color:"darkslateblue" ,textAlign:"center" ,textUnderlinePosition:"under"}}> 
+    Reserve Your <span style={{color:'maroon'}}><b>Dream </b></span><span style={{color:'green'}}>Land</span></h3>
+      <br></br>
+      <p><h5> Here, you can reserve the land that you are expecting to buy. You can reserve it for you
+        upto 10 days from payning date ,by paying the land reserving fee of Rs.50,000/=. This is a refundable payment 
+        that if you will not buy the lanssssd,money will be returned with 20% amount off. It will cost as the
+        reserving payment. 
+        <br></br>
+        Bank details are shown below. You can pay for bellow details & attach the payment receipt or transcript 
+        scanner copy and fill the form given below.All the money tractions are completely transparent..<br></br>
+        Our Agent will contact you soon.. </h5> </p>
+    </div>
 
 <div style={{padding:"20px"}}>
 <MDBRow>
