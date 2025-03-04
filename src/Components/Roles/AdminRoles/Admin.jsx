@@ -1,69 +1,111 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { Form ,Button} from 'react-bootstrap'
+import React from 'react'
+import { Button } from 'react-bootstrap'
 import { Paper } from '@mui/material'
-import UpdateUserData from './UpdateUserData'
 import Navigation from '../../Navigation'
+import Header from '../../Header'
+import { useNavigate } from 'react-router-dom'
 
 export default function Admin() {
 
-  const paperStyle={padding:"35px 20px",width:380,margin:"30px auto",background:"lightgrey" , border:"rounded"}
+  const paperStyle = {
+    padding: "20px", 
+    width: 280, 
+    margin: "10px", 
+    background: "white", 
+    borderRadius: "8px", 
+    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
+    textAlign: "center"
+  }
+  const navigate = useNavigate(); 
+
+  const handleLogout = () => {
+      localStorage.removeItem('jwtToken'); 
+      navigate('/login');
+  };
+
 
   return (
-    <div className=" justify-content-center" style={{width:"1000" , height:"1000", background:"whitesmoke"}}>
+    <>
+      <Header/>
+      <Navigation />
+    
+    
+    <div className="bg-secondary d-flex flex-column align-items-center" style={{ minHeight: "100vh" }}>
       
-<Navigation/>
+      <h2 className="text-center mt-3" style={{ fontSize: "2rem", fontWeight: "bold", color: "#2C3E50" }}>
+        <span style={{color: 'maroon'}}>Dream</span><span style={{color: 'green'}}>Lands</span> Admin Dashboard
+      </h2>
+
+      <div>
+          <Button variant="danger" type="contained" style={{ textAlign:"right" }} onClick={handleLogout}>
+          Logout from Admin page
+          </Button>
+      </div>
+
+      <div className="d-flex flex-wrap justify-content-center mt-4" style={{ maxWidth: "900px" }}>
+        {/* <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/RegList" style={buttonStyle}>
+            <h4>Registered Users</h4>
+          </Button>
+        </Paper> */}
+
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/AppList" style={buttonStyle}>
+            <h4>Appointments</h4>
+          </Button>
+        </Paper>
+
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/BookList" style={buttonStyle}>
+            <h4>Booking List</h4>
+          </Button>
+        </Paper>
+
+        {/* <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/ResList" style={buttonStyle}>
+            <h4>Land Reserving List</h4>
+          </Button>
+        </Paper> */}
+
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/List" style={buttonStyle}>
+            <h4>Requests of Selling Lands</h4>
+          </Button>
+        </Paper>
+
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/Admin/AddLand" style={buttonStyle}>
+            <h4>Add a Land</h4>
+          </Button>
+        </Paper>
+
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/Admin/EditLand" style={buttonStyle}>
+            <h4>Edit Land Details</h4>
+          </Button>
+        </Paper>
+
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/updateForm" style={buttonStyle}>
+            <h4>Update My Details</h4>
+          </Button>
+        </Paper>
+      </div>
+    </div>
+    </>
+  )
+}
+
+const buttonStyle = {
+  borderRadius: "5px", 
+  width: "100%", 
+  padding: "8px", 
+  textAlign: "center", 
+  fontSize: "1rem", 
+  transition: "background-color 0.3s ease",
+};
 
 
-<br></br>
-<br></br>
-
-<h2 className="text-center mt-2">  <span style={{color:'maroon'}}><b>DREAM</b></span><span style={{color:'green'}}>Lands</span> Admin Dashboard</h2>
-<div className="row">
-  <div className="col">
-
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/RegList" > <h3>Registered Users</h3> </Button>
-</Paper>
-
-</div><div className="col">
-
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/AppList" > <h3>Appointments</h3> </Button>
-</Paper>
-</div>
-<div className="row">
-<div className="col">
- <Paper elevation={2} style={paperStyle}>
-            <Button  variant="outline-success" size="lg" href="/BookList" ><h3> Booking List </h3></Button>
-</Paper>
-</div><div className="col">
-
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/ResList" > <h3>Land Reserving List</h3> </Button>
-</Paper>
-</div><div className="row">
-<div className="col">
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/List" > <h3>Requests of Selling Lands </h3> </Button>
-</Paper>
-</div><div className="col">
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/List" > <h3>Add a Land </h3> </Button>
-</Paper>
-<Paper elevation={2} style={paperStyle}>
-            <Button  variant="outline-success" size="lg" href="/updateForm" ><h3>Update my details</h3></Button>
-</Paper>
-
-
-</div>
-</div>
-</div>
-</div>
-
-
-
-</div>
 
 
 
@@ -76,9 +118,7 @@ export default function Admin() {
           </Form.Group> */
  
    
-  )
-}
-
+ 
 
 
 //  ----------------------------------

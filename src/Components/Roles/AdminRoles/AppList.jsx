@@ -14,10 +14,12 @@ export default function AppList() {
   return (
     <div>
         <Navigation/>
-
-        <h2> Booking List</h2>
-<div className="appointments" style={{ width:"800", height:"auto"}}>
-        
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "5vh",margin:"15px" }}>
+              <Button  variant="success" size="lg" href="/Admin">Back to Admin Dashboard</Button>
+            </div>
+            
+      <div className="appointments" style={{ width:"800", height:"auto"}}>
+              
 <UpdateApps/> </div>
 
 

@@ -31,7 +31,7 @@ function Appointment() {
   };
 
   return (
-    // <Paper elevation={2} style={paperStyle}>
+    
 
     <Card className="bg-inherit text-black">
       <Card.Img src= "/img/call1.jpg" 
@@ -39,12 +39,13 @@ function Appointment() {
       width={1000} 
       alt="app" />
       <Card.ImgOverlay>
-        <Card.Title className="text-center"> REQUEST APPOINTMENTS...</Card.Title>
+        <Card.Title style={{ textAlign:"center",color:"lightgoldenrodyellow" }}><h3> Request Appointments...</h3></Card.Title>
         <Card.Text>
 
-    <Form style={{alignContent:"center", width: "430px" , height:"350px", backgroundOpacity:"0.7", justifyContent:"left",padding:"10px" }} onSubmit={handleSubmit}>
-        <FormText> <h4 className='text-center' style={{color:"darkblue"}}> Enter Your Details here,</h4>
-    </FormText>
+      <div>
+          <Form style={{alignContent:"center", width: "430px", height:"auto", background:"white" ,opacity:"0.8",padding:"20px" }} onSubmit={handleSubmit}>
+              <FormText> <h4 className='text-center' style={{color:"darkblue"}}> Enter Your Details here,</h4>
+          </FormText>
 
 
 <Form.Group required  controlId="name" className="mt-3 ">  
@@ -78,6 +79,7 @@ function Appointment() {
       </Modal>
 
     </Form>
+    </div>
     </Card.Text>
     </Card.ImgOverlay>
     </Card>

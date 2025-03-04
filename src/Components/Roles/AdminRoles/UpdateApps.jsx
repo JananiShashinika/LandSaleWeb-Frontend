@@ -4,13 +4,15 @@ import { Button } from 'react-bootstrap'
 
 
  class UpdateApps extends Component {
-    constructor(props){
-        super(props)
-
+    constructor(props) {
+        super(props);
+    
         this.state = {
-            appointments : []
-
-        }
+            appointments: [],
+        };
+    
+        this.deleteAppointment = this.deleteAppointment.bind(this); 
+        this.toggleChecked = this.toggleChecked.bind(this);
     }
 
 componentDidMount(){
@@ -22,10 +24,32 @@ componentDidMount(){
 //     this.props.history.push('/AppList');
 // }
 
+
+deleteAppointment(app_No) {
+    UserService.deleteApps(app_No).then(() => {
+        this.setState((prevState) => ({
+            appointments: prevState.appointments.filter((app) => app.app_No !== app_No),
+        }));
+    });
+}
+toggleChecked(app) {
+    const newCheckedStatus = !app.checked;
+
+    UserService.updateAppStatus(app.app_No, newCheckedStatus).then(() => {
+        this.setState((prevState) => ({
+            appointments: prevState.appointments.map((a) =>
+                a.app_No === app.app_No ? { ...a, checked: newCheckedStatus } : a
+            ),
+        }));
+    }).catch(err => {
+        console.error("Failed to update status:", err);
+    });
+}
+
   render() {
     return (
       <div>
-        <h2 className="text-center"> Appointment List</h2>
+        <h2 className="Appointments-list" style={{ textAlign:"center" , marginTop:"20px"}}> Appointment List</h2>
         <div className="row">
             <table className="table table-striped table-bordered">
                 <thead>
@@ -55,9 +79,22 @@ componentDidMount(){
                               
                                 {/* <td> </td>
                                 <td> </td> */}
-                                <Button onClick = { () => this.editUser(app.app_no)}  variant="success" size="sm" >Update</Button>                          
-                                <Button onClick = { () => this.editUser(app.app_no)} variant="danger" size="sm" >Delete</Button> 
-                        
+                                 <td>
+                                    <Button
+                                        onClick={() => this.toggleChecked(app)}
+                                        variant={app.checked ? "warning" : "success"}
+                                        size="sm"
+                                    >
+                                        {app.checked ? "Checked" : "Check"}
+                                    </Button>{' '}
+                                    <Button 
+                                        onClick={() => this.deleteAppointment(app.app_No)} 
+                                        variant="danger" 
+                                        size="sm"
+                                    >
+                                        Delete
+                                    </Button>
+                                </td>
                             </tr>
                         )
 
@@ -71,4 +108,4 @@ componentDidMount(){
     )
   }
 }
-export default UpdateApps
+export default UpdateApps;

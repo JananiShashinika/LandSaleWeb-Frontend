@@ -4,6 +4,7 @@ import { Form,FormText,Button, Modal } from 'react-bootstrap'
 import { MDBRow ,MDBCol, MDBContainer} from 'mdb-react-ui-kit'
 import Footer from '../Footer'
 import Booking from './Booking'
+import Header from '../Header'
 // import { Component } from 'react'
 
 
@@ -39,17 +40,21 @@ function Book() {
 
   return (
     <div>
-<Navigation/>
-<br/>
-<Button  variant="outline-success" size="lg" href='/'> Back</Button>
+      <Header/>
+      <Navigation/>
 
-<div style={{ marginTop:"3px" , height:"800", align:"center",padding:"30px"}}>
+      <br/>
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "5vh" }}>
+        <Button  variant="success" size="lg" href="/Customer">Back to Customer Dashboard</Button>
+      </div>
 
-<h3 style={{color:"darkslateblue" ,textAlign:"center" ,textUnderlinePosition:"under"}}> 
-Book Your <span style={{color:'maroon'}}><b>DREAM </b></span><span style={{color:'green'}}>Land</span></h3>
-   {/* <br></br> */}
-   <p><h4> You can book the land for 02 days from the registered date..</h4> </p>
-</div>
+          <div style={{ marginTop:"3px" , height:"800", align:"center",padding:"30px"}}>
+
+          <h3 style={{color:"darkslateblue" ,textAlign:"center" ,textUnderlinePosition:"under"}}> 
+          Book Your <span style={{color:'maroon'}}><b>Dream </b></span><span style={{color:'green'}}>Land</span></h3>
+            {/* <br></br> */}
+            <p><h4> You can book the land for 02 days from the registered date..</h4> </p>
+          </div>
 
 <div style={{padding:"20px"}}>
 <MDBRow>

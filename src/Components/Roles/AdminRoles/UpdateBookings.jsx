@@ -18,14 +18,23 @@ componentDidMount(){
          this.setState({bookings : res.data});
         });
     }
-addbooking(){
+addBooking(){
     this.props.history.push('/BookList');
 }
+deleteBooking(id){
+    UserService.deleteBookings(id).then(() => {
+        this.setState((prevState) =>({
+            bookings: prevState.bookings.filter((bookings) => bookings.id !== id),
+        }));
+    });
+}
+
+
 
   render() {
     return (
       <div>
-        <h2 className="text-center"> Booking List</h2>
+        <h2 className="Booking-list" style={{ textAlign:"center" }}> Booking List</h2>
         <div className="row">
             <table className="table table-striped table-bordered">
                 <thead>
@@ -54,9 +63,12 @@ addbooking(){
                                 <td> {book.extra}</td>
                                 {/* <td> </td>
                                 <td> </td> */}
-                                <Button onClick = { () => this.editUser(book.id)}  variant="success" size="sm" >Update</Button>                          
-                                <Button onClick = { () => this.editUser(book.id)} variant="danger" size="sm" >Delete</Button> 
-                        
+                                <td>
+                                <Button onClick = { () => this.sendToAgent(book.id)}  variant="success" size="sm" >Send to Agent</Button>                          
+                                </td>
+                                <td>
+                                <Button onClick = { () => this.deleteBooking(book.id)} variant="danger" size="sm" >Delete</Button> 
+                                </td>
                             </tr>
                         )
 
