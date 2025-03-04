@@ -39,7 +39,7 @@ function RegisterForm() {
       
     <h1 className="welcome"> Welcome !</h1>
     <p className="sign" >
-    <h2 className="text-center mt-2"> Sign In with <span style={{color:'maroon'}}><b>DREAM </b></span><span style={{color:'green'}}>Lands </span> 
+    <h2 className="text-center mt-2"> Sign In with <span style={{color:'maroon'}}><b>Dream </b></span><span style={{color:'green'}}>Lands </span> 
  for the Best Experience...  </h2>
     </p>
     
@@ -181,3 +181,6 @@ function RegisterForm() {
         
         }
 export default RegisterForm;
+
+
+
