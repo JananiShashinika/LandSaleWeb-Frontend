@@ -23,6 +23,7 @@ export default function Benefits() {
             to make your desires come true. We follow a friendly manner with our valuable clients,
             the community and the beautiful environment."
           </p>
+          
           <p className="benefits-facilities">
             <h5>
               <b>Our Lands are provided best facilities that all you waiting for,</b>

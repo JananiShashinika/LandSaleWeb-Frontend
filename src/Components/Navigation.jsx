@@ -67,7 +67,6 @@ function Navigation() {
             <Nav.Link href="/aboutus">  About us</Nav.Link>
             <Nav.Link href="/contact">  Contact</Nav.Link>
   
-         
             <NavDropdown title="More Services" id="collasible-nav-dropdown">
             <NavDropdown.Item href="/housing"><h5>Housing Plans</h5></NavDropdown.Item>  
             <NavDropdown.Item href="/Customer"><h5>Customer Dashboard</h5></NavDropdown.Item>  

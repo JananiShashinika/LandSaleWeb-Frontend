@@ -1,55 +1,78 @@
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { Form ,Button} from 'react-bootstrap'
+import React from 'react'
+import { Button } from 'react-bootstrap'
 import { Paper } from '@mui/material'
-
 import Navigation from '../../Navigation'
+import Header from '../../Header'
 
 export default function Customer() {
 
-  const paperStyle={padding:"40px 20px",width:400,margin:"30px auto",background:"lightgrey"}
+  const paperStyle = {
+    padding: "20px", 
+    width: 280, 
+    margin: "10px", 
+    background: "white", 
+    borderRadius: "8px", 
+    boxShadow: "0px 2px 8px rgba(0, 0, 0, 0.1)",
+    textAlign: "center"
+  }
 
   return (
-    <div className="bg-secondary justify-content-center" style={{width:"1000" , height:"1000"}}>
-      
-<Navigation/>
+    <div className="bg-secondary d-flex flex-column align-items-center " style={{ minHeight: "100vh" }}>
+      <Header/>
+      <Navigation />
 
+      <h2 className="text-center mt-3" style={{ fontSize: "2rem", fontWeight: "bold", color: "#2C3E50" }}>
+        <span style={{color: 'maroon'}}>Dream</span><span style={{color: 'green'}}>Lands</span> Customer Dashboard
+      </h2>
 
-<br></br>
-<br></br>
+      <div className="d-flex flex-wrap justify-content-center mt-4" style={{ maxWidth: "800px" }}>
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/appointment" style={buttonStyle}>
+            <h4>Request an Appointment</h4>
+          </Button>
+        </Paper>
 
-<h2 className="text-center mt-2">  <span style={{color:'maroon'}}><b>DREAM</b></span><span style={{color:'green'}}>Lands</span> Customer Dashboard</h2>
-<div className="row">
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/search" style={buttonStyle}>
+            <h4>Search Lands</h4>
+          </Button>
+        </Paper>
 
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/comment" style={buttonStyle}>
+            <h4>Add a Comment</h4>
+          </Button>
+        </Paper>
 
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg"  href="/book"><h3>  Book a Land  </h3> </Button>
-</Paper>
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/book" style={buttonStyle}>
+            <h4>Book a Land</h4>
+          </Button>
+        </Paper>
+        
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/reserve" style={buttonStyle}>
+            <h4>Reserve a Land</h4>
+          </Button>
+        </Paper>
 
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/reserve"><h3>  Reserve a Land </h3> </Button>
-</Paper>
+        <Paper elevation={3} style={paperStyle}>
+          <Button variant="outline-success" size="md" href="/sell" style={buttonStyle}>
+            <h4>Sell Your Land</h4>
+          </Button>
+        </Paper>
 
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/comment"><h3>  Add a Comment </h3> </Button>
-</Paper>
-
-<Paper elevation={2} style={paperStyle}>
-            <Button variant="outline-success" size="lg" href="/sell"><h3>  Sell Your Land for us  </h3> </Button>
-</Paper>
-<Paper elevation={2} style={paperStyle}>
-            <Button  variant="outline-success" size="lg" href="/updateForm" ><h3>Update my details</h3></Button>
-</Paper>
-
-
-</div>
-</div>
-
-
-
-
+        
+      </div>
+    </div>
   )
 }
 
-
-
+const buttonStyle = {
+  borderRadius: "5px", 
+  width: "100%", 
+  padding: "8px", 
+  textAlign: "center", 
+  fontSize: "1rem", 
+  transition: "background-color 0.3s ease",
+};

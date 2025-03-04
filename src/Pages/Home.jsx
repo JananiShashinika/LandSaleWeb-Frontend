@@ -32,8 +32,8 @@ export default function Home() {
     <div >
       
       <Header/>
-      <Navigation/> 
-
+      <Navigation/>
+     
       {/* <TopicBox/> */}
 
       <Images/>
@@ -49,6 +49,7 @@ export default function Home() {
       {/* <SortLands/> */}
       {/* <LandSerach/> */}
       
+   
       <Footer/> 
 
       
