@@ -19,6 +19,7 @@ export default function Aboutus() {
         <h3 className="center" style={{color:"yellow",fontFamily:"cursive"}}>The Best place to invest...</h3>
         </Card.Text>
         
+        
         <div>
         <div style={{color: "white", fontSize:"20px" , width:"95%",height:"600px",textAlign:"center",fontFamily:"cursive" }}> We have been in business for past 32 years and we are specialized in providing
            quick and genuine real estate services. We are dedicated to create a better place on 
