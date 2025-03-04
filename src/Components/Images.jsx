@@ -5,7 +5,7 @@ import './images.css'
 function Images() {
 
   return (
-    <div className="mt-5">
+    <div className="mt-0">
     <Carousel>
 
     <Carousel.Item>

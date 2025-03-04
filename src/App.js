@@ -21,7 +21,7 @@ import Book from './Components/Service/Book';
 import BookingSuccess from './Components/Service/BookingSuccess';
 import Reserve from './Components/Service/Reserve';
 import ReserveSuccess from './Components/Service/ReserveSuccess';
-
+import Email from './Components/Service/Email';
 
 import Admin from './Components/Roles/AdminRoles/Admin';
 
@@ -51,6 +51,9 @@ import Customer from './Components/Roles/CustomerRoles/Customer';
 import LandSearch from './Components/LandSearch';
 import AppList from './Components/Roles/AdminRoles/AppList';
 import Comment from './Components/Service/Comment';
+import AddLands from './Components/Roles/AdminRoles/AddLands';
+import ProtectedRoute from './Components/ProtectedRoute';
+
 
 
 
@@ -69,16 +72,12 @@ function App() {
         <Route path="/aboutus" element={<AboutUs/>}/> 
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/submitRegForm" element={<RegistrationSuccess/>}/>
-
-        <Route path="/Admin" element={<Admin/>}/>
         
         <Route path="/RegList" element={<RegList/>}/>
         <Route path="/BookList" element={<BookList/>}/>
         <Route path="/AppList" element={<AppList/>}/>
 
-        <Route path="/Agent" element={<Agent/>}/>
-        {/* <Route path="/Agent" element={<Login/>}/> */}
-        <Route path="/Customer" element={<Customer/>}/>
+     
 
         {/* <Route path=" /submitRegForm" element={<Success/>}/> */}
 
@@ -90,7 +89,7 @@ function App() {
         <Route path="/comment" element={<Comment/>}/>
         <Route path="/sell" element={<SellLand/>}/>
         <Route path="/housing" element={<Housing/>}/>
-
+      {/* <Route path="/email" element={<Email/>}/> */}
 
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path="/yakkala" element={<Yakkala/>}/>
@@ -99,19 +98,36 @@ function App() {
         <Route path="/hatton" element={<Hatton/>}/>
         <Route path="/wewaldeniya" element={<Wewaldeniya/>}/>
         <Route path="/reserveSuccess" element={<ReserveSuccess/>}/>
+
+        <Route path="/Agent" element={<Agent/>}/>
+        {/* <Route path="/Agent" element={<Login/>}/> */}
+        <Route path="/Customer" element={<Customer/>}/>
+
+
+        <Route path="/Admin" element={<Admin/>}/>
+{/* Admin Routes */}
+        {/* <ProtectedRoute path="/Admin" element={<Admin />} />
+        <ProtectedRoute path="/Admin/AddLand" element={<AddLands/>}/>
+ */}
+
+
+
         </Routes>
+
+
+
         {/* <Link to='/gallery 'smooth>gallery</Link>
         */}
         {/* <Route path="/find" element={<LandSearch/>}/> */}
+
+
+
+
+        
      
-     
+    
        
-      {/* <Login/>
-      <TopicBox/>
-      <Navigation/> 
-       <Images/>
-      <Content/> */}
-      {/* /* <Footer/> */}
+ 
 
         
       

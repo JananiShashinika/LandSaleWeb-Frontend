@@ -2,7 +2,7 @@ import React from 'react';
 import  {CDBBox, CDBFooter, CDBFooterLink, CDBBtn, CDBIcon } from 'cdbreact';
 import Carousel from 'react-bootstrap/Carousel';
 import { LabelImportant } from '@mui/icons-material';
-
+import Email from './Service/Email';
 
 export const Footer = () => {
   return (
@@ -15,7 +15,7 @@ export const Footer = () => {
 
             <Carousel> <Carousel.Item>
               <img alt="house" src="/img/houseiconfooter.png" width="50px" />
-              <span className="ml-3 h5 font-weight-bold text-white" style={{color:"whitesmoke"}}>DREAM Lands</span>
+              <span className="ml-3 h5 font-weight-bold text-white" style={{color:"whitesmoke"}}> Dream Lands</span>
               </Carousel.Item>
               </Carousel>
             </a>
@@ -27,7 +27,7 @@ export const Footer = () => {
           </CDBBox>
           <CDBBox>
             <p className="h5 mb-4" style={{ fontWeight: '600' ,color:"whitesmoke"}}>
-            <span style={{color:'maroon'}}><b>DREAM</b></span><span style={{color:'green'}}>Lands</span> 
+            <span style={{color:'maroon'}}><b>Dream</b></span><span style={{color:'green'}}>Lands</span> 
             </p>
             <CDBBox flex="column" variant="secondary"  display="flex" style={{ cursor: "pointer", padding: "0"}}>
               <CDBFooterLink href="/">Resources</CDBFooterLink>
@@ -57,7 +57,7 @@ export const Footer = () => {
             </CDBBox>
 
             <CDBBox  display="flexbox" flex-direction= "column"style={{ cursor: "pointer", padding: "0"}}>
-              <CDBFooterLink  href="tel:035568233"><h5>Call us.. </h5></CDBFooterLink>
+              <CDBFooterLink  href="tel:035568233"><h5 style={{ color:"ghostwhite" }}>Call us.. </h5></CDBFooterLink>
 
             </CDBBox>
 
